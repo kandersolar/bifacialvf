@@ -548,7 +548,7 @@ def simulate(myTMY3, meta, writefiletitle=None, tilt=0, sazm=180,
                     # TODO: Modify so it works with axis_azm different of 0 
                     #        (sazm = 90 or 270 only)
                     if tracking == True:                                   
-                        if sazm == 270.0:
+                        if abs(sazm - 270.0) < 1e-3:
                             rangestart = sensorsy-1
                             rangeend = -1
                             steprange = -1
